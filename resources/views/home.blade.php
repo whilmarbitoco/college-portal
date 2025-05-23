@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="flex flex-col min-h-screen leading-normal font-inter bg-primary-bg text-primary-text">
-        @include('header')
+        @include('navbar')
         <main class="flex-grow">
             <section
                 class="overflow-hidden relative py-24 text-center bg-gradient-to-br from-primary-bg to-secondary-bg md:py-32">
