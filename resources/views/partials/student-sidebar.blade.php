@@ -32,7 +32,7 @@
                    </a>
                </li>
                <li>
-                   <a href="#"
+                   <a href="{{ route('student.grade') }}"
                        class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                            fill="currentColor" viewBox="0 0 24 24">
@@ -50,21 +50,25 @@
                            <path
                                d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                        </svg>
-                       Calendar
+                       Event
                    </a>
+               </li>
                </li>
            </ul>
        </nav>
 
        <div class="mt-auto">
-           <a href="#"
-               class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
-               <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
-                   fill="currentColor" viewBox="0 0 24 24">
-                   <path
-                       d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
-               </svg>
-               Logout
-           </a>
+           <form method="POST" action="{{ route('logout') }}">
+               @csrf
+               <button type="submit"
+                   class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
+                   <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
+                       fill="currentColor" viewBox="0 0 24 24">
+                       <path
+                           d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                   </svg>
+                   Logout
+               </button>
+           </form>
        </div>
    </aside>

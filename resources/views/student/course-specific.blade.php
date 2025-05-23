@@ -36,9 +36,6 @@
                 </x-card>
             </x-tab-content>
 
-            {{-- <x-card>
-            </x-card> --}}
-
             <x-tab-content id="tab2">
                 <x-card>
                     <h2 class="mb-6 text-2xl font-semibold text-primary-text">
