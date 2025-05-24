@@ -12,7 +12,7 @@
            <ul class="space-y-2">
                <li>
                    <a href="{{ route('student.dashboard') }}"
-                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
+                       class="{{ Route::is('student.dashboard') ? 'tab-active' : '' }} flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                            fill="currentColor" viewBox="0 0 24 24">
                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -22,7 +22,7 @@
                </li>
                <li>
                    <a href="{{ route('student.course') }}"
-                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
+                       class="{{ Route::is('student.course') ? 'tab-active' : '' }} flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                            fill="currentColor" viewBox="0 0 24 24">
                            <path
@@ -33,7 +33,7 @@
                </li>
                <li>
                    <a href="{{ route('student.grade') }}"
-                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
+                       class="{{ Route::is('student.grade') ? 'tab-active' : '' }} flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                            fill="currentColor" viewBox="0 0 24 24">
                            <path
@@ -43,8 +43,8 @@
                    </a>
                </li>
                <li>
-                   <a href="#"
-                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
+                   <a href="{{ route('student.event') }}"
+                       class="{{ Route::is('student.event') ? 'tab-active' : '' }} flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                            fill="currentColor" viewBox="0 0 24 24">
                            <path
@@ -61,7 +61,7 @@
            <form method="POST" action="{{ route('logout') }}">
                @csrf
                <button type="submit"
-                   class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
+                   class="w-full flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
                    <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
                        fill="currentColor" viewBox="0 0 24 24">
                        <path

@@ -1,5 +1,5 @@
 @props(['id'])
 
-<div {{ $attributes->merge(['id' => $id]) }} class="hidden tab-content">
+<div x-show="active === '{{ $id }}'" x-cloak class="tab-content">
     {{ $slot }}
 </div>

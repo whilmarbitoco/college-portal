@@ -30,10 +30,10 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         return match (Auth::user()->role) {
-            UserRole::ADMIN      => redirect()->route('admin.dashboard'),
+            UserRole::ADMIN => redirect()->route('admin.dashboard'),
             UserRole::INSTRUCTOR => redirect()->route('instructor.dashboard'),
-            UserRole::STUDENT    => redirect()->route('student.dashboard'),
-            default              => redirect('/'), // fallback
+            UserRole::STUDENT => redirect()->route('student.dashboard'),
+            default => redirect('/'),  // fallback
         };
     }
 

@@ -1,5 +1,5 @@
  @props(['name'])
 
- <th class="py-3 px-6 text-left text-xs font-semibold text-primary-text uppercase tracking-wider min-w-[200px]">
+ <th class="px-6 py-3 text-xs font-semibold tracking-wider text-left uppercase text-primary-text">
      {{ $name }}
  </th>
