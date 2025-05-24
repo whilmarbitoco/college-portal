@@ -19,13 +19,12 @@
                     <x-table-cell name="Action" />
                 </x-table-head>
                 <x-table-body>
-
                     <x-table-item>
                         <x-table-data>Introduction to Web Development</x-table-data>
                         <x-table-data>CS101</x-table-data>
                         <x-table-data>Cluster I</x-table-data>
                         <x-table-data>
-                            <a href="/student/course/1" class="button-text text-accent hover:text-accent-light">
+                            <a href="/instructor/course/1" class="button-text text-accent hover:text-accent-light">
                                 Details</a>
                         </x-table-data>
                     </x-table-item>

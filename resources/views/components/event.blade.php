@@ -37,6 +37,14 @@
                         {{ $location }}
                     </p>
                 </div>
+                <div class="space-x-2 text-right">
+                    <button class="button-text text-accent hover:text-accent-light">
+                        Edit
+                    </button>
+                    <button class="button-text text-danger hover:text-danger-light">
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
     </div>

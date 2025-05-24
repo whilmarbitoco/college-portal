@@ -85,11 +85,5 @@
             </section>
         </main>
 
-        <footer class="py-8 mt-auto text-sm text-center border-t bg-secondary-bg text-tertiary-text border-border">
-            <div class="container px-6 mx-auto md:px-8">
-                <p>&copy; 2025 Nebula College Portal. All rights reserved.</p>
-                <p class="mt-1">Developed by Whilmar M. Bitoco</p>
-            </div>
-        </footer>
-    </div>
+
 </x-app-layout>

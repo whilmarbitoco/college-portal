@@ -11,7 +11,7 @@
             <nav class="flex-grow">
                 <ul class="space-y-2">
                     <li>
-                        <a href="#"
+                        <a href="{{ route('instructor.dashboard') }}"
                             class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                             <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                                 fill="currentColor" viewBox="0 0 24 24">
@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('instructor.course') }}"
                             class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                             <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                                 fill="currentColor" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('instructor.grade') }}"
                             class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                             <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                                 fill="currentColor" viewBox="0 0 24 24">
@@ -43,39 +43,32 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('instructor.event') }}"
                             class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                             <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                                 fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                             </svg>
-                            Schedule
+                            Events
                         </a>
                     </li>
-                    <li>
-                        <a href="#"
-                            class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
-                            <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M18 10h-2V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v4H4c-1.1 0-2 .9-2 2v8h20v-8c0-1.1-.9-2-2-2zm-6 9c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm6-11v-1c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v1h-2V6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v4H4c-1.1 0-2 .9-2 2v8h20v-8c0-1.1-.9-2-2-2z" />
-                            </svg>
-                            Reports
-                        </a>
-                    </li>
+
                 </ul>
             </nav>
 
             <div class="mt-auto">
-                <a href="#"
-                    class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
-                    <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
-                        fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
-                    </svg>
-                    Logout
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit"
+                        class="flex items-center p-3 w-full rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
+                        <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                        </svg>
+                        Logout
+                    </button>
+                </form>
             </div>
         </aside>

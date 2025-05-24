@@ -5,19 +5,14 @@ namespace App\Http\Controllers\Instructor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('instructor.course');
-    }
-
-    public function specific($id)
-    {
-        return view('instructor.course-specific');
+        return view('instructor.event');
     }
 
     /**
@@ -25,7 +20,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('instructor.add-event');
     }
 
     /**

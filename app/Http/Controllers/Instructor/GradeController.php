@@ -5,19 +5,19 @@ namespace App\Http\Controllers\Instructor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('instructor.course');
+        return view('instructor.grade');
     }
 
     public function specific($id)
     {
-        return view('instructor.course-specific');
+        return view('instructor.grade-specific');
     }
 
     /**

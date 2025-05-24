@@ -79,6 +79,10 @@ input[type="number"] {
     @apply bg-primary-bg text-accent ring-accent-light;
 }
 
+[x-cloak] {
+    display: none;
+}
+
 /* ================= */
 
 @media print {

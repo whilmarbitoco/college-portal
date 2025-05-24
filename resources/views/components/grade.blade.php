@@ -20,7 +20,7 @@
                 </button>
             </div>
         </div>
-        <div x-show="open" class="pt-4 mt-4 border-t accordion-content border-border">
+        <div x-show="open" x-cloack x-transition class="pt-4 mt-4 border-t accordion-content border-border">
             <h3 class="mb-4 text-lg font-semibold text-primary-text">
                 Grade Breakdown:
             </h3>
