@@ -11,21 +11,16 @@
         <div class="flex items-center space-x-6">
             <ul class="hidden space-x-6 md:flex">
                 <li>
-                    <a href="#"
+                    <a href="/"
                         class="text-lg font-medium transition-colors text-primary-text hover:text-accent">Home</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="/about"
                         class="text-lg font-medium transition-colors text-primary-text hover:text-accent">About</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="/announcements"
                         class="text-lg font-medium transition-colors text-primary-text hover:text-accent">Announcements</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="text-lg font-medium transition-colors text-primary-text hover:text-accent">Events
-                    </a>
                 </li>
             </ul>
 

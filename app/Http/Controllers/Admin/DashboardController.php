@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Profile;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 
-class ProfileController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    public function index()
     {
-        return view('profile.profile');
+        return view('admin.dashboard');
     }
 
     /**
@@ -21,7 +20,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('profile.edit');
+        //
     }
 
     /**
@@ -43,7 +42,10 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id) {}
+    public function edit(string $id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.

@@ -120,7 +120,14 @@
                                     </x-table-data>
                                 </x-table-item>
                                 <x-table-item>
-                                    <x-table-data>Prelim</x-table-data>
+                                    <x-table-data>Midterm</x-table-data>
+                                    <x-table-data>91</x-table-data>
+                                    <x-table-data>100</x-table-data>
+                                    <x-table-data>20
+                                    </x-table-data>
+                                </x-table-item>
+                                <x-table-item>
+                                    <x-table-data>Finals</x-table-data>
                                     <x-table-data>91</x-table-data>
                                     <x-table-data>100</x-table-data>
                                     <x-table-data>20

@@ -162,7 +162,7 @@
                                 <label for="announcement-content" class="sr-only">Announcement Content</label>
                                 <textarea id="announcement-content" rows="5"
                                     class="px-4 py-3 w-full rounded-md border transition-all outline-none bg-secondary-bg text-primary-text border-border placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent"
-                                    placeholder="Write your announcement here..." required></textarea>
+                                    placeholder="Write your announcement here..."></textarea>
                             </div>
                             <div class="text-right">
                                 <button type="submit"

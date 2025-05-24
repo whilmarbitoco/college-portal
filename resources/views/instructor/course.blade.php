@@ -25,7 +25,7 @@
                         <x-table-data>Cluster I</x-table-data>
                         <x-table-data>
                             <a href="/instructor/course/1" class="button-text text-accent hover:text-accent-light">
-                                Details</a>
+                                Manage</a>
                         </x-table-data>
                     </x-table-item>
                 </x-table-body>

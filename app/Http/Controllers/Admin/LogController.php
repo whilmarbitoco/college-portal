@@ -1,26 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Student;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
 
-use function Termwind\render;
-
-class DashboardController extends Controller
+class LogController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    public function index()
     {
-        return view('student.dashboard');
-    }
-
-    public function transcript(): View
-    {
-        return view('student.transcript');
+        return view('admin.log');
     }
 
     /**

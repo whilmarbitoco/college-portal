@@ -8,7 +8,8 @@
             <x-card>
                 <div class="flex justify-between items-center cursor-pointer">
                     <div>
-                        <a href="#" class="text-xl font-semibold text-primary-text hover:text-accent">
+                        <a href="{{ route('instructor.grade.specific', ['id' => 1]) }}"
+                            class="text-xl font-semibold text-primary-text hover:text-accent">
                             Data Structures and Algorithm
                             <span class="ml-2 text-base text-tertiary-text">(CS101)</span>
                         </a>

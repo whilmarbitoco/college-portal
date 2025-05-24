@@ -1,19 +1,16 @@
 @extends('layouts.instructor')
 
 @section('content')
-    <header class="flex justify-between items-center mb-8 md:mb-10">
-        <h1 class="text-3xl font-bold md:text-4xl text-primary-text">
-            Welcome, Professor Eleanor Vance!
-        </h1>
+    <x-header head=" Welcome, Professor Eleanor Vance!" body="">
         <div class="flex items-center space-x-4">
-            <button
+            {{-- {{ route('profile') }} --}}
+            <a href="#"
                 class="flex justify-center items-center w-10 h-10 text-lg font-semibold rounded-full bg-accent text-primary-text"
                 aria-label="User Profile">
                 EV
-            </button>
+            </a>
         </div>
-
-    </header>
+    </x-header>
 
 
     <section class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">

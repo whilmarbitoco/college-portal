@@ -2,27 +2,19 @@
 
 @section('content')
     <div>
-        <header class="flex justify-between items-center mb-8 md:mb-10">
-            <!-- Mobile toggle button -->
-            <button class="p-2 md:hidden text-primary-text"
-                onclick="document.getElementById('mobileSidebar').classList.toggle('hidden')" aria-label="Toggle sidebar">
-                <!-- Hamburger icon -->
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
 
-            <h1 class="text-3xl font-bold md:text-4xl text-primary-text">
-                Welcome, Alex Johnson!
-            </h1>
+        <x-header head="Welcome, Alex Johnson!" body="">
             <div class="flex items-center space-x-4">
-                <a href="{{ route('profile') }}"
+                {{-- {{ route('profile') }} --}}
+                <a href="#"
                     class="flex justify-center items-center w-10 h-10 text-lg font-semibold rounded-full bg-accent text-primary-text"
                     aria-label="User Profile">
                     AJ
                 </a>
             </div>
-        </header>
+        </x-header>
+
+
 
         <section class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
             <x-card>
