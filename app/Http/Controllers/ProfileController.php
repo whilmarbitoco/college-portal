@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SiteInfo;
 use Illuminate\Http\Request;
 
-class AnnouncementController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('announcement', ['site' => SiteInfo::find(1)]);
+        return view('profile.profile');
     }
 
-    public function specific($id)
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        return view('announcement-specific', ['site' => SiteInfo::find(1)]);
+        return view('profile.edit');
     }
 
     /**

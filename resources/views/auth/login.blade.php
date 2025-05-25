@@ -8,7 +8,7 @@
 
     <!-- Foreground Card Layer -->
     <div class="flex relative z-10 justify-center items-center px-4 min-h-screen sm:px-6 lg:px-8">
-        <div class="p-6 w-full max-w-sm text-center rounded-lg shadow-xl bg-secondary-bg sm:p-8 sm:max-w-md">
+        <div class="p-6 w-full max-w-sm text-center rounded-lg border border-border bg-secondary-bg sm:p-8 sm:max-w-md">
             <div class="mb-6 sm:mb-8">
                 <h1 class="mt-4 text-2xl font-bold sm:text-3xl text-primary-text">
                     Nebula College

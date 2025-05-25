@@ -6,7 +6,7 @@
         <section class="overflow-hidden relative py-24 bg-gradient-to-br from-primary-bg to-secondary-bg">
             <div class="absolute inset-0 opacity-10"
                 style="
-   background-image: url('{{ $background == null ? '../background.jpg' : 'alt' }}');
+   background-image: url('{{ $site->background == null ? '../background.jpg' : 'alt' }}');
           background-size: cover;
           background-repeat: no-repeat;
         ">
@@ -78,7 +78,7 @@
 
         <footer class="py-8 mt-auto text-sm text-center border-t bg-secondary-bg text-tertiary-text border-border">
             <div class="container px-6 mx-auto md:px-8">
-                <p>&copy; {{ date('Y') }} {{ $name }} Portal. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} {{ $site->name }} Portal. All rights reserved.</p>
                 <p class="mt-1">Developed by Whilmar M. Bitoco</p>
             </div>
         </footer>

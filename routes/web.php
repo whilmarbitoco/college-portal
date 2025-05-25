@@ -1,45 +1,33 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ProfileController;
 use App\Models\SiteInfo;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $site = SiteInfo::find(1);
-
-    return view('home', [
-        'name' => $site->name,
-        'acronym' => $site->acronym,
-        'background' => $site->background,
-        'description' => $site->description,
-    ]);
+    return view('home', ['site' => SiteInfo::find(1)]);
 });
 
 Route::get('/about', function () {
-    $site = SiteInfo::find(1);
-    return view('about', [
-        'name' => $site->name,
-        'acronym' => $site->acronym,
-        'story' => $site->story,
-        'background' => $site->background,
-        'description' => $site->description,
-        'mission' => $site->mission,
-        'vision' => $site->vision,
-        'values' => $site->values
-    ]);
+    return view('about', ['site' => SiteInfo::find(1)]);
+});
+
+Route::get('/program', function () {
+    return view('program', ['site' => SiteInfo::find(1)]);
 });
 
 Route::get('/announcements', [AnnouncementController::class, 'index']);
 
 Route::get('/announcements/{id}', [AnnouncementController::class, 'specific']);
 
-// Route::prefix('/profile')->group(function () {
-//     Route::get('/', [ProfileController::class, 'index'])
-//         ->name('profile');
+Route::prefix('/profile')->group(function () {
+    Route::get('/', [ProfileController::class, 'index'])
+        ->name('profile');
 
-//     Route::get('/edit', [ProfileController::class, 'create'])
-//         ->name('profile.edit');
-// });
+    Route::get('/edit', [ProfileController::class, 'create'])
+        ->name('profile.edit');
+});
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/student.php';

@@ -5,22 +5,27 @@
                 <path
                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
             </svg>
-            <div class="text-2xl font-bold text-primary-text">{{ $acronym }}</div>
+            <div class="text-2xl font-bold text-primary-text">{{ $site->acronym }}</div>
         </div>
 
         <div class="flex items-center space-x-6">
             <ul class="hidden space-x-6 md:flex">
                 <li>
                     <a href="/"
-                        class="text-lg font-medium transition-colors text-primary-text hover:text-accent">Home</a>
+                        class="{{ Request::path() == '/' ? 'text-accent' : 'text-primary-text' }} text-md font-medium transition-colors  hover:text-accent">Home</a>
                 </li>
                 <li>
                     <a href="/about"
-                        class="text-lg font-medium transition-colors text-primary-text hover:text-accent">About</a>
+                        class="{{ Request::path() == 'about' ? 'text-accent' : 'text-primary-text' }} text-md font-medium transition-colors hover:text-accent">About</a>
+                </li>
+
+                <li>
+                    <a href="/program"
+                        class="{{ Request::path() == 'program' ? 'text-accent ' : 'text-primary-text' }} text-md font-medium transition-colors hover:text-accent">Program</a>
                 </li>
                 <li>
                     <a href="/announcements"
-                        class="text-lg font-medium transition-colors text-primary-text hover:text-accent">Announcements</a>
+                        class="{{ Request::path() == 'announcements' ? 'text-accent' : 'text-primary-text' }} text-md font-medium transition-colors hover:text-accent">Announcements</a>
                 </li>
             </ul>
 

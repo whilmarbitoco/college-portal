@@ -1,5 +1,10 @@
 <x-app-layout>
-    <div class="flex justify-center items-center p-4 min-h-screen bg-primary-bg font-inter">
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-no-repeat bg-cover opacity-30 filter blur-sm"
+            style="background-image: url('../background.jpg');">
+        </div>
+    </div>
+    <div class="flex relative z-10 justify-center items-center px-4 min-h-screen sm:px-6 lg:px-8">
         <div class="p-8 w-full max-w-md rounded-lg border shadow-xl bg-secondary-bg border-border">
             <div class="mb-8 text-center">
                 <svg class="mx-auto mb-4 w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 24 24">
@@ -23,7 +28,8 @@
             <form method="POST" accept="{{ route('password.email') }}">
                 @csrf
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium text-primary-text">Email Address</label>
+                    <label for="email" class="block mb-2 text-sm font-medium text-primary-text">Email
+                        Address</label>
                     <input type="email" id="email" name="email" placeholder="your.email@example.com"
                         class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent"
                         required />
@@ -46,7 +52,8 @@
                 <p class="text-tertiary-text">
                     Remember your password?
                     <a href="{{ route('login') }}"
-                        class="font-medium no-underline transition-colors text-accent hover:text-accent-light">Back to
+                        class="font-medium no-underline transition-colors text-accent hover:text-accent-light">Back
+                        to
                         Login</a>
                 </p>
             </div>

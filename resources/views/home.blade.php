@@ -6,16 +6,16 @@
                 class="overflow-hidden relative py-24 text-center bg-gradient-to-br from-primary-bg to-secondary-bg md:py-32">
                 <div class="absolute inset-0 opacity-10"
                     style="
-          background-image: url('{{ $background == null ? './background.jpg' : 'alt' }}');
+          background-image: url('{{ $site->background == null ? './background.jpg' : 'alt' }}');
           background-size: cover;
           background-repeat: no-repeat;
         ">
                 </div>
                 <h1 class="mb-4 text-3xl font-extrabold drop-shadow-lg md:text-5xl lg:text-6xl text-primary-text">
-                    Welcome to the <span class="text-accent">{{ $name }} Portal</span>
+                    Welcome to the <span class="text-accent">{{ $site->name }} Portal</span>
                 </h1>
                 <div class="mx-auto mb-10 max-w-2xl text-lg md:text-xl text-tertiary-text">
-                    {!! $description !!}
+                    {!! $site->description !!}
                 </div>
                 <a href="/login"
                     class="inline-flex justify-center items-center px-8 py-3 text-lg font-bold rounded-full shadow-lg transition-all duration-300 transform cursor-pointer hover:scale-105 bg-accent text-primary-bg hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent">
@@ -86,7 +86,7 @@
 
         <footer class="py-8 mt-auto text-sm text-center border-t bg-secondary-bg text-tertiary-text border-border">
             <div class="container px-6 mx-auto md:px-8">
-                <p>&copy; {{ date('Y') }} {{ $name }} Portal. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} {{ $site->name }} Portal. All rights reserved.</p>
                 <p class="mt-1">Developed by Whilmar M. Bitoco</p>
             </div>
         </footer>

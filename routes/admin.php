@@ -13,6 +13,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/program', [ProgramController::class, 'index'])
         ->name('admin.program');
 
+    Route::get('/program/add', [ProgramController::class, 'create'])
+        ->name('admin.create');
+
     Route::get('/log', [LogController::class, 'index'])
         ->name('admin.log');
 

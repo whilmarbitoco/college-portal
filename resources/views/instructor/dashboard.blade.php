@@ -3,7 +3,7 @@
 @section('content')
     <x-header head=" Welcome, Professor Eleanor Vance!" body="">
         <div class="flex items-center space-x-4">
-            {{-- {{ route('profile') }} --}}
+            {{ route('profile') }}
             <a href="#"
                 class="flex justify-center items-center w-10 h-10 text-lg font-semibold rounded-full bg-accent text-primary-text"
                 aria-label="User Profile">
