@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Settings\SiteInfoRequest;
+use App\Models\SiteInfo;
 use Illuminate\Http\Request;
+use Validator;
 
 class SettingsController extends Controller
 {
@@ -31,28 +34,14 @@ class SettingsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function updateSiteInfo(SiteInfoRequest $request)
     {
-        //
-    }
+        $info = SiteInfo::find(1);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+        $data = $request->validated();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+        $info->update($data);
+        return redirect()->route('admin.dashboard');
     }
 
     /**

@@ -5,7 +5,7 @@
                 <path
                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
             </svg>
-            <div class="text-2xl font-bold text-primary-text">Nebula College</div>
+            <div class="text-2xl font-bold text-primary-text">{{ $acronym }}</div>
         </div>
 
         <div class="flex items-center space-x-6">
@@ -24,10 +24,17 @@
                 </li>
             </ul>
 
-            <a href="/login"
-                class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
-                Login
-            </a>
+            @if (Auth::check())
+                <a href="/login"
+                    class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
+                    Dashboard
+                </a>
+            @else
+                <a href="/login"
+                    class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
+                    Login
+                </a>
+            @endif
         </div>
 
         <button class="md:hidden text-primary-text focus:outline-none">

@@ -79,97 +79,155 @@
                     </svg>
                 </button>
             </div>
-            <form x-show="toggle" class="space-y-4">
+
+
+            <form x-show="toggle" x-cloack x-transition class="space-y-4" method="POST"
+                action="{{ route('admin.settings.siteinfo') }}" enctype="multipart/form-data">
+                @csrf
                 <div>
                     <label for="school-name" class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Name
                     </label>
-                    <input type="text" id="school-name"
+                    <input type="text" id="school-name" name="name"
                         class="px-3 py-2 w-full rounded-md border transition-all outline-none bg-secondary-bg text-primary-text border-border placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent disabled:bg-gray-700 disabled:text-gray-400 disabled:cursor-not-allowed disabled:border-gray-700"
-                        value="Nebula University" required />
+                        value="Nebula University" required placeholder="Enter the full name of the school" />
                     <p class="mt-1 text-xs text-tertiary-text">
                         Displayed on headers, reports, and transcripts.
                     </p>
+                    @error('name')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
+
+                <div>
+                    <label for="school-acronym" class="block mb-1 text-sm font-medium text-tertiary-text">
+                        School Acronym
+                    </label>
+                    <input type="text" id="school-acronym" name="acronym"
+                        class="px-3 py-2 w-full rounded-md border transition-all outline-none bg-secondary-bg text-primary-text border-border placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent disabled:bg-gray-700 disabled:text-gray-400 disabled:cursor-not-allowed disabled:border-gray-700"
+                        value="NU" required placeholder="Enter the school acronym (e.g. NU)" />
+                    <p class="mt-1 text-xs text-tertiary-text">
+                        Displayed on navbars and sidebars.
+                    </p>
+                    @error('acronym')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </div>
+
                 <div>
                     <label for="school-logo" class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Logo
                     </label>
-                    <input type="file" id="school-logo"
-                        class="p-2 w-full bg-transparent rounded-lg cursor-pointer form-input border-border file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-bg file:text-accent hover:file:bg-border" />
+                    <input type="file" id="school-logo" name="image"
+                        class="p-2 w-full bg-transparent rounded-lg cursor-pointer form-input border-border file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-bg file:text-accent hover:file:bg-border"
+                        placeholder="Upload your institution logo (PNG, JPG, SVG)" />
                     <p class="mt-1 text-xs text-tertiary-text">
                         Upload institution logo (PNG, JPG, SVG recommended).
                     </p>
+                    @error('image')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div x-data="{ story: '' }">
                     <label class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Story
                     </label>
-                    <input x-model="story" type="hidden">
+                    <input x-model="story" type="hidden" name="story">
                     <div
-                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text  placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
+                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
                         <div id="school-story-editor" class="overflow-scroll w-full h-[10rem]"></div>
                     </div>
                     <p class="mt-1 text-xs text-tertiary-text">
                         Displayed on the about page.
                     </p>
+                    @error('story')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div x-data="{ desc: '' }">
                     <label class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Description
                     </label>
-                    <input x-model="desc" type="hidden">
+                    <input x-model="desc" type="hidden" name="description">
                     <div
-                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text  placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
+                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
                         <div id="school-desc-editor" class="overflow-scroll w-full h-[10rem]"></div>
                     </div>
                     <p class="mt-1 text-xs text-tertiary-text">
                         Displayed on the home page.
                     </p>
+                    @error('description')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div x-data="{ mission: '' }">
                     <label class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Mission
                     </label>
-                    <input x-model="mission" type="hidden">
+                    <input x-model="mission" type="hidden" name="mission">
                     <div
-                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text  placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
+                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
                         <div id="school-mission-editor" class="overflow-scroll w-full h-[10rem]"></div>
                     </div>
                     <p class="mt-1 text-xs text-tertiary-text">
-                        Displayed on the home page.
+                        Displayed on the about page.
                     </p>
+                    @error('mission')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div x-data="{ vision: '' }">
                     <label class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Vision
                     </label>
-                    <input x-model="vision" type="hidden">
+                    <input x-model="vision" type="hidden" name="vision">
                     <div
-                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text  placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
+                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
                         <div id="school-vision-editor" class="overflow-scroll w-full h-[10rem]"></div>
                     </div>
                     <p class="mt-1 text-xs text-tertiary-text">
-                        Displayed on the home page.
+                        Displayed on the about page.
                     </p>
+                    @error('vision')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div x-data="{ core: '' }">
                     <label class="block mb-1 text-sm font-medium text-tertiary-text">
                         School Core Values
                     </label>
-                    <input x-model="core" type="hidden">
+                    <input x-model="core" type="hidden" name="values">
                     <div
-                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text  placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
+                        class="overflow-scroll w-full rounded-md border transition-all outline-none max-h-[20rem] bg-secondary-bg text-primary-text placeholder:text-tertiary-text placeholder:opacity-70 focus:border-accent focus:shadow-focus-accent">
                         <div id="school-core-editor" class="overflow-scroll w-full h-[10rem]"></div>
                     </div>
                     <p class="mt-1 text-xs text-tertiary-text">
                         Displayed on the home page.
                     </p>
+                    @error('values')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="flex justify-end pt-4">
@@ -183,6 +241,7 @@
                     </button>
                 </div>
             </form>
+
         </x-card>
 
         <script>

@@ -17,4 +17,7 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/settings', [SettingsController::class, 'index'])
         ->name('admin.settings');
+
+    Route::post('/settings/siteinfo', [SettingsController::class, 'updateSiteInfo'])
+        ->name('admin.settings.siteinfo');
 });

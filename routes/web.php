@@ -1,14 +1,31 @@
 <?php
 
 use App\Http\Controllers\Profile\ProfileController;
+use App\Models\SiteInfo;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    $site = SiteInfo::find(1);
+
+    return view('home', [
+        'name' => $site->name,
+        'acronym' => $site->acronym,
+        'image' => $site->image,
+        'description' => $site->description,
+    ]);
 });
 
 Route::get('/about', function () {
-    return view('about');
+    $site = SiteInfo::find(1);
+    return view('about', [
+        'name' => $site->name,
+        'acronym' => $site->acronym,
+        'story' => $site->story,
+        'description' => $site->description,
+        'mission' => $site->mission,
+        'vision' => $site->vision,
+        'values' => $site->values
+    ]);
 });
 
 // Route::prefix('/profile')->group(function () {

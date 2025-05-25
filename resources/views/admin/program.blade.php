@@ -39,7 +39,6 @@
                                 class="font-medium no-underline transition-colors text-accent hover:text-accent-light">Edit</a>
                             <a href="#"
                                 class="ml-4 font-medium text-red-600 no-underline transition-colors hover:text-red-700">Delete</a>
-
                         </x-table-data>
                     </x-table-item>
                 </x-table-body>
