@@ -24,17 +24,12 @@
                 </li>
             </ul>
 
-            @if (Auth::check())
-                <a href="/login"
-                    class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
-                    Dashboard
-                </a>
-            @else
-                <a href="/login"
-                    class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
-                    Login
-                </a>
-            @endif
+
+            <a href="/login"
+                class="inline-flex justify-center items-center px-6 py-2 font-semibold no-underline rounded-full border-none transition-colors transform cursor-pointer outline-none bg-accent text-primary-text hover:bg-accent-darker active:bg-accent-darkest active:shadow-inner focus:shadow-focus-accent hover:scale-105">
+                {{ Auth::check() ? 'Dashboard' : 'Login' }}
+            </a>
+
         </div>
 
         <button class="md:hidden text-primary-text focus:outline-none">

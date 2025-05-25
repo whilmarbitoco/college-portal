@@ -14,6 +14,7 @@
             <x-tab-head>
                 <x-tab-item name="First Semester" tab="default" />
                 <x-tab-item name="Second Semester" tab="sem2" />
+                <x-tab-item name="Summer Semester" tab="sem3" />
             </x-tab-head>
 
             <x-tab-content id="default">
@@ -23,6 +24,12 @@
                 </div>
             </x-tab-content>
             <x-tab-content id="sem2">
+                <div class="flex-1 space-y-4">
+                    <x-grade id="ac1" course="Database Management" code="CS101" instructor="Prof. Eleanor Vance" />
+                    <x-grade id="ac2" course="Software Development" code="CS101" instructor="Prof. Eleanor Vance" />
+                </div>
+            </x-tab-content>
+            <x-tab-content id="sem3">
                 <div class="flex-1 space-y-4">
                     <x-grade id="ac1" course="Database Management" code="CS101" instructor="Prof. Eleanor Vance" />
                     <x-grade id="ac2" course="Software Development" code="CS101" instructor="Prof. Eleanor Vance" />

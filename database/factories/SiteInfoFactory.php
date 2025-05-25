@@ -20,7 +20,8 @@ class SiteInfoFactory extends Factory
         return [
             'name' => fake()->domainName(),
             'acronym' => fake()->name(),
-            'image' => fake()->imageUrl(),
+            'logo' => null,
+            'background' => null,
             'story' => Str::random(30),
             'description' => Str::random(40),
             'mission' => Str::random(30),

@@ -126,7 +126,24 @@
                         class="p-2 w-full bg-transparent rounded-lg cursor-pointer form-input border-border file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-bg file:text-accent hover:file:bg-border"
                         placeholder="Upload your institution logo (PNG, JPG, SVG)" />
                     <p class="mt-1 text-xs text-tertiary-text">
-                        Upload institution logo (PNG, JPG, SVG recommended).
+                        Upload institution logo (PNG and JPG are the only format allowed).
+                    </p>
+                    @error('image')
+                        <span class="text-red-500">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </div>
+
+                <div>
+                    <label for="school-logo" class="block mb-1 text-sm font-medium text-tertiary-text">
+                        School Image
+                    </label>
+                    <input type="file" id="school-image" name="image"
+                        class="p-2 w-full bg-transparent rounded-lg cursor-pointer form-input border-border file:mr-4 file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary-bg file:text-accent hover:file:bg-border"
+                        placeholder="Upload your institution logo (PNG, JPG, SVG)" />
+                    <p class="mt-1 text-xs text-tertiary-text">
+                        Upload background image
                     </p>
                     @error('image')
                         <span class="text-red-500">

@@ -3,7 +3,7 @@
 @section('content')
     <div>
 
-        <x-header head="Welcome, Alex Johnson!" body="">
+        <x-header head="Welcome, Alex Johnson!" body="Program: Bachelor of Science in Computer Science">
             <div class="flex items-center space-x-4">
                 {{-- {{ route('profile') }} --}}
                 <a href="#"
@@ -37,9 +37,9 @@
                         <span class="text-sm text-tertiary-text">MA 101</span>
                     </li>
                 </ul>
-                <button class="mt-4 button button-text text-accent">
+                <a href="{{ route('student.course') }}" class="mt-4 button button-text text-accent">
                     View All Courses
-                </button>
+                </a>
             </x-card>
 
             <x-card>
@@ -84,47 +84,46 @@
                 <p class="text-sm text-primary-text">
                     No new grade alerts. Keep up the great work!
                 </p>
-                <button class="mt-4 button button-text text-accent">
+                <a href="{{ route('student.transcript') }}" class="mt-4 button button-text text-accent">
                     View Full Transcript
-                </button>
-            </x-card>
-
-            <x-card>
-                <h2 class="mb-4 text-xl font-semibold card-title">
-                    Latest Announcements
-                </h2>
-                <ul class="space-y-4">
-                    <li class="pb-3 border-b border-border last:border-b-0">
-                        <p class="text-base font-medium">
-                            <span class="text-accent">Important:</span> Midterm Exam Schedule
-                            Release
-                        </p>
-                        <p class="mt-1 text-sm text-tertiary-text">
-                            The updated midterm exam schedule for all departments is now
-                            available on the portal. Please check your course pages for
-                            details.
-                        </p>
-                        <p class="mt-2 text-xs text-tertiary-text">
-                            May 20, 2025 | Department of Academics
-                        </p>
-                    </li>
-                    <li class="pb-3 border-b border-border last:border-b-0">
-                        <p class="text-base font-medium">
-                            Campus-wide Maintenance Advisory
-                        </p>
-                        <p class="mt-1 text-sm text-tertiary-text">
-                            Network services will experience intermittent disruptions on May
-                            25 from 10 PM to 2 AM for scheduled maintenance.
-                        </p>
-                        <p class="mt-2 text-xs text-tertiary-text">
-                            May 18, 2025 | IT Department
-                        </p>
-                    </li>
-                </ul>
-                <button class="mt-4 button button-text text-accent">
-                    View All Announcements
-                </button>
+                </a>
             </x-card>
         </section>
+        <x-card>
+            <h2 class="mb-4 text-xl font-semibold card-title">
+                Latest Announcements
+            </h2>
+            <ul class="space-y-4">
+                <li class="pb-3 border-b border-border last:border-b-0">
+                    <p class="text-base font-medium">
+                        <span class="text-accent">Important:</span> Midterm Exam Schedule
+                        Release
+                    </p>
+                    <p class="mt-1 text-sm text-tertiary-text">
+                        The updated midterm exam schedule for all departments is now
+                        available on the portal. Please check your course pages for
+                        details.
+                    </p>
+                    <p class="mt-2 text-xs text-tertiary-text">
+                        May 20, 2025 | Department of Academics
+                    </p>
+                </li>
+                <li class="pb-3 border-b border-border last:border-b-0">
+                    <p class="text-base font-medium">
+                        Campus-wide Maintenance Advisory
+                    </p>
+                    <p class="mt-1 text-sm text-tertiary-text">
+                        Network services will experience intermittent disruptions on May
+                        25 from 10 PM to 2 AM for scheduled maintenance.
+                    </p>
+                    <p class="mt-2 text-xs text-tertiary-text">
+                        May 18, 2025 | IT Department
+                    </p>
+                </li>
+            </ul>
+            <button class="mt-4 button button-text text-accent">
+                View All Announcements
+            </button>
+        </x-card>
     </div>
 @endsection

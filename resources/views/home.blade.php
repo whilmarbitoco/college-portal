@@ -6,7 +6,7 @@
                 class="overflow-hidden relative py-24 text-center bg-gradient-to-br from-primary-bg to-secondary-bg md:py-32">
                 <div class="absolute inset-0 opacity-10"
                     style="
-          background-image: url('/background.jpg');
+          background-image: url('{{ $background == null ? './background.jpg' : 'alt' }}');
           background-size: cover;
           background-repeat: no-repeat;
         ">

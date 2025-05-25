@@ -1,12 +1,12 @@
    <aside style="min-width: 16rem; max-width: 16rem" id="mobileSidebar"
        class="hidden fixed top-0 z-50 flex-col p-6 w-64 h-screen shadow-lg transition-transform transform -translate-x-full bg-secondary-bg md:sticky md:transform-none md:translate-x-0 md:flex">
-       <div class="flex items-center mb-10">
+       <a href="/" class="flex items-center mb-10">
            <svg class="mr-2 w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
                <path
                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
            </svg>
            <span class="text-xl font-bold text-primary-text">Nebula Student</span>
-       </div>
+       </a>
 
        <nav class="flex-grow">
            <ul class="space-y-2">
@@ -61,7 +61,7 @@
            <form method="POST" action="{{ route('logout') }}">
                @csrf
                <button type="submit"
-                   class="w-full flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
+                   class="flex items-center p-3 w-full rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-danger group">
                    <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-danger"
                        fill="currentColor" viewBox="0 0 24 24">
                        <path

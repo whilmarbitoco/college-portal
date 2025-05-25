@@ -5,7 +5,7 @@ use App\Http\Controllers\Student\DashboardController;
 use App\Http\Controllers\Student\EventController;
 use App\Http\Controllers\Student\GradeController;
 
-Route::middleware('role:guest')->prefix('student')->group(function () {
+Route::prefix('student')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
         ->name('student.dashboard');
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Profile\ProfileController;
+use App\Http\Controllers\AnnouncementController;
 use App\Models\SiteInfo;
 use Illuminate\Support\Facades\Route;
 
@@ -10,7 +10,7 @@ Route::get('/', function () {
     return view('home', [
         'name' => $site->name,
         'acronym' => $site->acronym,
-        'image' => $site->image,
+        'background' => $site->background,
         'description' => $site->description,
     ]);
 });
@@ -21,12 +21,17 @@ Route::get('/about', function () {
         'name' => $site->name,
         'acronym' => $site->acronym,
         'story' => $site->story,
+        'background' => $site->background,
         'description' => $site->description,
         'mission' => $site->mission,
         'vision' => $site->vision,
         'values' => $site->values
     ]);
 });
+
+Route::get('/announcements', [AnnouncementController::class, 'index']);
+
+Route::get('/announcements/{id}', [AnnouncementController::class, 'specific']);
 
 // Route::prefix('/profile')->group(function () {
 //     Route::get('/', [ProfileController::class, 'index'])

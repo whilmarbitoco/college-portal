@@ -12,7 +12,8 @@ class SiteInfo extends Model
     protected $fillable = [
         'name',
         'acronym',
-        'image',
+        'logo',
+        'background',
         'story',
         'description',
         'mission',

@@ -23,7 +23,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('acronym');
-            $table->string('image');
+            $table->string('logo')->nullable();
+            $table->string('background')->nullable();
             $table->text('description');
             $table->text('story');
             $table->longText('mission');

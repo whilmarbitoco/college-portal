@@ -26,7 +26,8 @@ class SiteInfoRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'acronym' => 'required',
-            'image' => 'required|mimes:jpeg,png,jpg',
+            'logo' => 'required|mimes:jpeg,png,jpg',
+            'background' => 'required|mimes:jpeg,png,jpg',
             'story' => 'required|string',
             'description' => 'required|string',
             'mission' => 'required|string',
