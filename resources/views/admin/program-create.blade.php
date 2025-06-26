@@ -12,14 +12,16 @@
         </header>
 
         <section class="p-6 mx-auto max-w-3xl rounded-md shadow-md bg-secondary-bg">
-            <form>
+
+            <form method="POST" action="{{ route('admin.program.store') }}">
+                @csrf
                 <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
                     <div>
                         <label for="program-title" class="block mb-2 text-sm font-medium text-primary-text">
                             Program Title <span class="text-danger">*</span>
                         </label>
-                        <input type="text" id="program-title" name="program_title"
-                            placeholder="e.g., Bachelor of Science in Computer Science"
+                        <input value="Bachelor of Science in Information Technology" type="text" id="program-title"
+                            name="program_title" placeholder="e.g., Bachelor of Science in Computer Science"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent"
                             required />
                     </div>
@@ -28,7 +30,7 @@
                         <label for="program-code" class="block mb-2 text-sm font-medium text-primary-text">
                             Program Code <span class="text-danger">*</span>
                         </label>
-                        <input type="text" id="program-code" name="program_code" placeholder="e.g., BSCS"
+                        <input value="BSIT" type="text" id="program-code" name="program_code" placeholder="e.g., BSCS"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent"
                             required />
                     </div>
@@ -40,9 +42,9 @@
                         <select id="program-type" name="program_type"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text focus:outline-none focus:ring-2 focus:ring-accent-light"
                             required>
-                            <option value="" disabled selected>Select Program Type</option>
+                            <option value="" disabled>Select Program Type</option>
                             <option value="undergraduate">Undergraduate</option>
-                            <option value="graduate">Graduate</option>
+                            <option value="graduate" selected>Graduate</option>
                             <option value="diploma">Diploma</option>
                             <option value="certificate">Certificate</option>
                         </select>
@@ -55,9 +57,9 @@
                         <select id="department" name="department"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text focus:outline-none focus:ring-2 focus:ring-accent-light"
                             required>
-                            <option value="" disabled selected>Select Department</option>
+                            <option value="" disabled>Select Department</option>
                             <option value="computer_science">Computer Science</option>
-                            <option value="engineering">Engineering</option>
+                            <option value="engineering" selected>Engineering</option>
                             <option value="liberal_arts">Liberal Arts</option>
                             <option value="business">Business Administration</option>
                             <option value="education">Education</option>
@@ -68,7 +70,7 @@
                         <label for="duration" class="block mb-2 text-sm font-medium text-primary-text">
                             Duration (in Years) <span class="text-danger">*</span>
                         </label>
-                        <input type="number" id="duration" name="duration" placeholder="e.g., 4" min="1"
+                        <input value="4" type="number" id="duration" name="duration" placeholder="e.g., 4" min="1"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent"
                             required />
                     </div>
@@ -80,7 +82,7 @@
                         <select id="status" name="status"
                             class="p-3 w-full rounded-md border transition-colors bg-primary-bg border-border text-primary-text focus:outline-none focus:ring-2 focus:ring-accent-light"
                             required>
-                            <option value="active">Active</option>
+                            <option value="active" selected>Active</option>
                             <option value="inactive">Inactive</option>
                         </select>
                     </div>
@@ -92,7 +94,8 @@
                     </label>
                     <textarea id="description" name="description" rows="5"
                         placeholder="Provide a brief description of the program, its objectives, and career prospects."
-                        class="p-3 w-full rounded-md border transition-colors resize-y bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent"></textarea>
+                        class="p-3 w-full rounded-md border transition-colors resize-y bg-primary-bg border-border text-primary-text placeholder-tertiary-text focus:outline-none focus:ring-2 focus:ring-accent-light focus:shadow-focus-accent">
+                        A comprehensive program covering algorithms, software development, data structures, and artificial intelligence. Prepares students for careers in software engineering, data science, and cybersecurity.</textarea>
                 </div>
 
                 <div class="flex justify-end space-x-4">

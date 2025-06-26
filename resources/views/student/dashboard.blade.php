@@ -5,11 +5,10 @@
 
         <x-header head="Welcome, Alex Johnson!" body="Program: Bachelor of Science in Computer Science">
             <div class="flex items-center space-x-4">
-                {{-- {{ route('profile') }} --}}
                 <a href="#"
                     class="flex justify-center items-center w-10 h-10 text-lg font-semibold rounded-full bg-accent text-primary-text"
                     aria-label="User Profile">
-                    AJ
+                    OK
                 </a>
             </div>
         </x-header>

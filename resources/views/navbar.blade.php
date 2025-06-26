@@ -1,11 +1,11 @@
-<header class="px-6 py-4 shadow-md bg-secondary-bg md:px-8">
+<header class="p-6 shadow-md bg-secondary-bg md:px-8">
     <nav class="container flex justify-between items-center mx-auto">
         <div class="flex items-center">
             <svg class="mr-2 w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
                 <path
                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
             </svg>
-            <div class="text-2xl font-bold text-primary-text">{{ $site->acronym }}</div>
+            <div class="text-2xl font-bold text-primary-text">{{ $siteInfo->acronym }}</div>
         </div>
 
         <div class="flex items-center space-x-6">

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\UserRole;
+use App\Models\Department;
 use App\Models\SiteInfo;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,11 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
         User::factory()->create([
             'email' => 'test@example.com',
-            'role' => UserRole::INSTRUCTOR->value
+            'role' => UserRole::ADMIN->value
         ]);
 
         SiteInfo::factory()->create([

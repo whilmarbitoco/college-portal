@@ -20,4 +20,9 @@ class SiteInfo extends Model
         'vision',
         'values',
     ];
+
+    public function decoded_description()
+    {
+        return strip_tags($this->description);
+    }
 }

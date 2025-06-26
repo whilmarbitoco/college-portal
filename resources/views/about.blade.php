@@ -4,9 +4,8 @@
 
         <main class="flex-grow">
             <section class="overflow-hidden relative py-24 bg-gradient-to-br from-primary-bg to-secondary-bg">
-                <div class="absolute inset-0 opacity-10"
-                    style="
-          background-image: url('{{ $site->background == null ? './background.jpg' : 'alt' }}');
+                <div class="absolute inset-0 opacity-10" style="
+          background-image: url('{{ $site->background == null ? './background.jpg' : asset('storage/' . $siteInfo->background) }}');
           background-size: cover;
           background-repeat: no-repeat;
         ">

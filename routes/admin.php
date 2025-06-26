@@ -14,7 +14,7 @@ Route::prefix('admin')->group(function () {
         ->name('admin.program');
 
     Route::get('/program/add', [ProgramController::class, 'create'])
-        ->name('admin.create');
+        ->name('admin.program.create');
 
     Route::get('/log', [LogController::class, 'index'])
         ->name('admin.log');
@@ -27,4 +27,6 @@ Route::prefix('admin')->group(function () {
 
     Route::post('/settings/siteinfo', [SettingsController::class, 'updateSiteInfo'])
         ->name('admin.settings.siteinfo');
+
+    Route::post("/program/add", [ProgramController::class, "store"])->name("admin.program.store");
 });

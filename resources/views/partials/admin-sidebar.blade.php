@@ -11,7 +11,7 @@
       <nav class="flex-grow">
           <ul class="space-y-2">
               <li>
-                  <a href="#"
+                  <a href="{{ route('admin.dashboard') }}"
                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                       <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                           fill="currentColor" viewBox="0 0 24 24">
@@ -21,7 +21,7 @@
                   </a>
               </li>
               <li>
-                  <a href="#"
+                  <a href="{{ route('admin.user') }}"
                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                       <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                           fill="currentColor" viewBox="0 0 24 24">
@@ -31,6 +31,19 @@
                       Users
                   </a>
               </li>
+
+                    <li>
+                  <a href="{{ route('admin.program') }}"
+                      class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
+                      <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
+                          fill="currentColor" viewBox="0 0 24 24">
+                          <path
+                              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                      </svg>
+                      Programs
+                  </a>
+              </li>
+
               <li>
                   <a href="#"
                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
@@ -65,22 +78,8 @@
                   </a>
               </li>
 
-
-
               <li>
-                  <a href="#"
-                      class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
-                      <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
-                          fill="currentColor" viewBox="0 0 24 24">
-                          <path
-                              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                      </svg>
-                      Programs
-                  </a>
-              </li>
-
-              <li>
-                  <a href="#"
+                  <a href="{{ route('admin.settings') }}"
                       class="flex items-center p-3 rounded-md transition-colors text-primary-text hover:bg-primary-bg hover:text-accent group">
                       <svg class="mr-3 w-5 h-5 transition-colors text-tertiary-text group-hover:text-accent"
                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

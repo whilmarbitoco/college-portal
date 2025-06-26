@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Requests\Settings;
 
 use App\Enums\UserRole;
@@ -23,16 +24,17 @@ class SiteInfoRequest extends FormRequest
      */
     public function rules(): array
     {
+        // dd($this);
         return [
-            'name' => 'required|max:255',
-            'acronym' => 'required',
-            'logo' => 'required|mimes:jpeg,png,jpg',
-            'background' => 'required|mimes:jpeg,png,jpg',
-            'story' => 'required|string',
-            'description' => 'required|string',
-            'mission' => 'required|string',
-            'vision' => 'required|string',
-            'values' => 'required|string'
+            'name' => 'nullable|max:255',
+            'acronym' => 'nullable|string',
+            'logo' => 'nullable|mimes:jpeg,png,jpg',
+            'background' => 'nullable|mimes:jpeg,png,jpg',
+            'story' => 'nullable|string',
+            'description' => 'nullable|string',
+            'mission' => 'nullable|string',
+            'vision' => 'nullable|string',
+            'values' => 'nullable|string'
         ];
     }
 }
